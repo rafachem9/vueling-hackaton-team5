@@ -2,7 +2,7 @@ import pandas as pd
 import json
 from fastapi import FastAPI
 from pydantic import BaseModel
-from funciones_optimizacion import calcular_coste, driver
+from funciones_optimizacion import driver
 
 
 class HandlingFunction(BaseModel):

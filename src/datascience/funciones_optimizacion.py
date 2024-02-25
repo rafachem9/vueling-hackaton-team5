@@ -64,7 +64,7 @@ def calcular_coste(df, date, handling_function, part_time_cost, full_time_cost,
     interval['date'] = pd.to_datetime(interval['shift_time_init'].dt.date)
     interval.drop(index=interval.index[-1], axis=0, inplace=True)
 
-    # Cálculamos el número de empleados
+    # Calculators el número de empleados
     interval['required_employees'] = 0
     interval['handling_function'] = handling_function
     for j, row in interval[1:].iterrows():
@@ -132,7 +132,7 @@ def calcular_coste(df, date, handling_function, part_time_cost, full_time_cost,
     prob.solve()
     # print("Status:", LpStatus[prob.status])
 
-    # Calculo del número de empleados necesarios
+    # Cálculo del número de empleados necesarios
     interval['full_time_employees'] = 0
     interval['part_time_employees'] = 0
 
